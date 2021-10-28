@@ -1,0 +1,20 @@
+<div class="cont">
+    <form [formGroup]="osobaForma" (ngSubmit)="onSubmit()">
+        <mat-form-field>
+            <mat-label>Unesite prezime</mat-label>
+            <input matInput type="text" formControlName="prezime">
+        </mat-form-field>
+
+        <mat-form-field>
+            <mat-label>Unesite ime</mat-label>
+            <input matInput type="text" formControlName="ime">
+        </mat-form-field>
+
+        <mat-form-field>
+            <mat-label>Unesite email adresu</mat-label>
+            <input matInput type="text" formControlName="email">
+        </mat-form-field>
+
+        <button mat-flat-button [disabled]="!osobaForma.valid" color="primary" type="submit">Snimi</button>
+    </form>
+</div>
