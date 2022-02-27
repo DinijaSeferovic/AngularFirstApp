@@ -9,7 +9,7 @@ import { DrugaComponent } from './stranice/druga/druga.component';
 import { NavigacijaComponent } from './statusneStranice/navigacija/navigacija.component';
 import { FooterComponent } from './statusneStranice/footer/footer.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { MatToolbarModule } from '@angular/material/toolbar'
+import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatButtonModule } from '@angular/material/button';
 import { HttpClientModule, HTTP_INTERCEPTORS } from "@angular/common/http";
 import { MatGridListModule } from '@angular/material/grid-list';
@@ -26,6 +26,7 @@ import { CovidInfoComponent } from './stranice/covid-info/covid-info.component';
 import { ChartsModule } from 'ng2-charts';
 import { DatePipe } from '@angular/common';
 import { LoginComponent } from './stranice/login/login.component';
+import { CovidDrzaveComponent } from './stranice/covid-drzave/covid-drzave.component';
 
 @NgModule({
   declarations: [
@@ -40,7 +41,8 @@ import { LoginComponent } from './stranice/login/login.component';
     LoaderComponent,
     DrzavaDetaljiComponent,
     CovidInfoComponent,
-    LoginComponent
+    LoginComponent,
+    CovidDrzaveComponent
   ],
   imports: [
     BrowserModule,

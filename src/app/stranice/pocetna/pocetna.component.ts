@@ -20,22 +20,7 @@ export class PocetnaComponent implements OnInit, OnDestroy {
   constructor(private notif: MatSnackBar, private servis: ApiService) { }
 
   ngOnInit() {
-    //this.ucitavanjeUToku=true;
-    this.servis.getDrzave().subscribe((rezultat) => {
-      this.listaDrzava = rezultat;
-      //this.ucitavanjeUToku = false;
-    },
-      (greska) => {
-        //this.ucitavanjeUToku = false;
-        this.notif.open('Dogodila se greška, molimo pokušajte kasnije', 'Zatvori')
-      });
-    
-    //this.listaDrzava$ = this.servis.getDrzave();
-    }
 
-  pretrazi() {
-    this.listaDrzava = this.listaDrzava.filter((drzava) => {return drzava.name.common.toLowerCase().includes(this.terminPretrage.toLowerCase())});
-    
   }
 
   ngOnDestroy() {

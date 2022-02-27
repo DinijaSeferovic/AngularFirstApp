@@ -7,6 +7,7 @@ import { ReactiveFormsComponent } from './stranice/reactive-forms/reactive-forms
 import { DrzavaDetaljiComponent } from './stranice/drzava-detalji/drzava-detalji.component';
 import { CovidInfoComponent } from './stranice/covid-info/covid-info.component';
 import { LoginComponent } from './stranice/login/login.component';
+import { CovidDrzaveComponent } from './stranice/covid-drzave/covid-drzave.component';
 
 const routes: Routes = [
   { path: '', component: PocetnaComponent },
@@ -15,6 +16,7 @@ const routes: Routes = [
   { path: 'drzava-detalji/:id', component: DrzavaDetaljiComponent},
   { path: 'covid-info/:id', component: CovidInfoComponent},
   { path: 'login', component: LoginComponent},
+  { path: 'covid-drzave', component: CovidDrzaveComponent},
   { path: '**', component: NotFoundComponent }
 ];
 

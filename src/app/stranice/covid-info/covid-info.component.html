@@ -1,13 +1,13 @@
 <div class="container" *ngIf="covidInfo">
     <h1>{{nazivDrzave}}</h1>
-    <h4>Covid-19 info zaključno sa {{danasnjiDatum | date:'dd.MM.yyyy.'}}</h4>
-    <p>Ukupan broj stanovnika: {{brojStanovnika | number}}</p>
-    <p>Ukupno zaraženih: {{ukupnoZarazenih | number}}</p>
-    <p>Ukupan broj smrtnih slučajeva: {{ukupnoSmrtnihSlucajeva | number}}</p>
-    <p>Ukupno oporavljenih: {{maxOporavljenih.recovered| number}}</p>
-    <p>Najveći broj zaraženih po danu: {{maxDnevniBrojZarazenih.confirmed_daily | number}} - {{maxDnevniBrojZarazenih.date | date:'dd.MM.yyyy.'}}</p>
-    <p>Najveći broj umrlih po danu: {{maxDnevniBrojUmrlih.deaths | number}} - {{maxDnevniBrojUmrlih.date | date:'dd.MM.yyyy.'}}</p>
-    <p>Prosječan broj zaraženih po danu: {{prosjecanBrojZarazenih | number}}</p>
+    <h4>Covid-19 info as of {{danasnjiDatum | date:'dd.MM.yyyy.'}}</h4>
+    <p>Population: {{brojStanovnika | number}}</p>
+    <p>Total number of infected: {{ukupnoZarazenih | number}}</p>
+    <p>Total number of deaths: {{ukupnoSmrtnihSlucajeva | number}}</p>
+    <p>Total number of recovered: {{maxOporavljenih.recovered| number}}</p>
+    <p>Most infected per day: {{maxDnevniBrojZarazenih.confirmed_daily | number}} - {{maxDnevniBrojZarazenih.date | date:'dd.MM.yyyy.'}}</p>
+    <p>Most deaths per day: {{maxDnevniBrojUmrlih.deaths | number}} - {{maxDnevniBrojUmrlih.date | date:'dd.MM.yyyy.'}}</p>
+    <p>Average number of infected per day: {{prosjecanBrojZarazenih | number}}</p>
     <div class="grafikoni">
 
         <canvas baseChart [datasets]="grafikonPodaciZarazenih" [labels]="grafikonLabele" [chartType]="'bar'"></canvas>

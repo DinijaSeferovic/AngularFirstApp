@@ -26,8 +26,8 @@ export class NavigacijaComponent implements OnInit {
 
   Druga() {
     this.router.navigate(['druga']);
-    console.log('Korisnik je kliknuo na dugme Druga');
   }
+
 
   logout(){
     this.auth.logout();

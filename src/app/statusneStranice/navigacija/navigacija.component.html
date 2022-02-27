@@ -1,6 +1,7 @@
 <mat-toolbar color="primary">
-  <button mat-button [routerLink]="''">Početna</button>
-  <button mat-button [routerLink]="'reaktivne-forme'">Reaktivne forme</button>
+  <button mat-button [routerLink]="''">Home</button>
+  <button mat-button [routerLink]="'covid-drzave'">Countries</button>
+  <button mat-button [routerLink]="'reaktivne-forme'" *ngIf="!user.isLoggedIn">Register</button>
   <button mat-button [routerLink]="'login'" *ngIf="!user.isLoggedIn">Log In</button>
   <button mat-button (click)="logout()" *ngIf="user.isLoggedIn">Log Out</button>
 </mat-toolbar>

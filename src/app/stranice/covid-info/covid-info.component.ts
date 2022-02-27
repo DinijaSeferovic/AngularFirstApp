@@ -56,14 +56,14 @@ export class CovidInfoComponent implements OnInit {
 
         this.grafikonPodaciZarazenih = [{
           data: [... this.covidInfo.map((dan) => dan.confirmed_daily)], 
-          label: 'Broj zaraženih po danu',
+          label: 'Daily confirmed cases',
           barThickness: 2
         }]
         this.grafikonLabele = [... this.covidInfo.map((dan) => this.datePipe.transform(dan.date, 'dd.MM.yy.'))]
         
         this.grafikonPodaciUmrlih = [{
           data: [... this.covidInfo.map((dan) => dan.deaths_daily).filter((umrli) => umrli>=0)], 
-          label: 'Broj umrlih po danu',
+          label: 'Daily deaths',
           backgroundColor: 'rgb(63,81,181)',
           barThickness: 2
         }]

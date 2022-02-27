@@ -6,10 +6,10 @@
     </mat-card-header>
 
     <mat-card-content>
-       <p *ngIf="drzava.capital"> Glavni grad: {{drzava.capital[0]}}</p>
-       <p> Broj stanovnika: {{drzava.population | number}}</p>
-       <p> Povrsina: {{drzava.area | number}} km2</p>
-       <button mat-raised-button color="primary" [routerLink]="['drzava-detalji', drzava.cca3]">Saznaj više</button>
-       <button mat-raised-button color="primary" [routerLink]="['covid-info', drzava.name.common]">Covid-19 info</button>
+       <p *ngIf="drzava.capital"> Capital: {{drzava.capital[0]}}</p>
+       <p> Population: {{drzava.population | number}}</p>
+       <p> Area: {{drzava.area | number}} km2</p>
+       <button mat-raised-button color="primary" [routerLink]="['drzava-detalji', drzava.cca3]">Details</button>
+       <button mat-raised-button color="primary" [routerLink]="['covid-info', drzava.name.common]">Covid-19 Info</button>
     </mat-card-content>
 </mat-card>

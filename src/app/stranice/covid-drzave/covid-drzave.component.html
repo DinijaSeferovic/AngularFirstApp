@@ -1,0 +1,15 @@
+<div class="form-container">
+    <div class="forma">
+        <mat-form-field>
+            <input matInput type="text" placeholder="Enter the search term" [(ngModel)]="terminPretrage">
+        </mat-form-field>
+        <button mat-raised-button color="secondary" (click)="pretrazi()"  >
+            <img class="btn-img" src="../../../assets/magnifying-glass.png">
+        </button>
+    </div>
+</div>
+<div class="omotac">
+    <div *ngFor="let drzava of listaDrzava">
+        <app-drzava-card [drzava]="drzava"></app-drzava-card>
+    </div>
+</div>
